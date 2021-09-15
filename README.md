@@ -1,16 +1,16 @@
 Description:
 
-The usecase is built on jetson Nano(4GB dev kit)
-The usecase inference was executed and tested on jetson Nano.
+The usecase is built on jetson Nano(4GB dev kit)<br>
+The usecase inference was executed and tested on jetson Nano.<br>
 
-This usecase is for generating alert: 
-    1. when loitering is detected in a given area.
-    2. if count of person increases beyond allowed number.
+This usecase is for generating alert: <br>
+    1. when loitering is detected in a given area.<br>
+    2. if count of person increases beyond allowed number.<br>
 
 
-**SSD Model** is used for detecting people.
+**SSD Model** is used for detecting people.<br>
 
-**Project Structure:**
+**Project Structure:**<br>
 
 loitering_dwell_detection <br>
     --- 1. loiter_dwell_detection.py<br>
