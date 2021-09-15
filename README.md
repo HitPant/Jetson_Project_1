@@ -32,10 +32,11 @@ config.json containes the following parameters:<br>
 Note: To use Opencv with CUDA and use opencv dnn module install Opencv from source.
 
 Steps to run the the script:
-    1. Define the following in the config.json file:
+    1. Define the following in the config.json file:<br>
         1. video source<br>
         2. person count allowed<br>
         3. dwell time allowed<br>
+        <br>
     2. Open the terminal in the location where loiter_dwell_detection.py is present.<br>
     
     3. run the following command:
