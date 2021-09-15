@@ -13,15 +13,15 @@ This usecase is for generating alert:
 **Project Structure:**
 
 loitering_dwell_detection <br>
-    --- 1. loiter_dwell_detection.py
-    --- 2. config.json 
-    --- 3. model
-        --- MobileNetSSD_deploy.caffemodel
-        --- MobileNetSSD_deploy.prototxt.txt
-    --- 4. tracker
-        --- centroidtracker.py
-    --- 5. person_count_alert:
-        --- **stores images with time stamp when person exceed beyond threshold value**
+    --- 1. loiter_dwell_detection.py<br>
+    --- 2. config.json <br>
+    --- 3. model<br>
+        --- MobileNetSSD_deploy.caffemodel<br>
+        --- MobileNetSSD_deploy.prototxt.txt<br>
+    --- 4. tracker<br>
+        --- centroidtracker.py<br>
+    --- 5. person_count_alert:<br>
+        --- **stores images with time stamp when person exceed beyond threshold value**<br>
 
 **Parameters** and **values** for generating alert are defined in **config.json**
 config.json containes the following parameters:
