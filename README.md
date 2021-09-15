@@ -23,11 +23,11 @@ loitering_dwell_detection <br>
     --- 5. person_count_alert:<br>
         --- **stores images with time stamp when person exceed beyond threshold value**<br>
 
-**Parameters** and **values** for generating alert are defined in **config.json**
-config.json containes the following parameters:
-    1. person_duration (Dwell time allowed per person)
-    2. personCountExceed (maximum number of persons allowed in a frame at a given time)
-    3. vid_source (video source[videofile, rtsp, camera])
+**Parameters** and **values** for generating alert are defined in **config.json**<br>
+config.json containes the following parameters:<br>
+    1. person_duration (Dwell time allowed per person)<br>
+    2. personCountExceed (maximum number of persons allowed in a frame at a given time)<br>
+    3. vid_source (video source[videofile, rtsp, camera])<br>
 
 Note: To use Opencv with CUDA and use opencv dnn module install Opencv from source.
 
@@ -36,8 +36,7 @@ Steps to run the the script:
         1. video source
         2. person count allowed
         3. dwell time allowed
-    
     2. Open the terminal in the location where loiter_dwell_detection.py is present.
     
     3. run the following command:
-        python3 loiter_dwell_detection.py
+        $ python3 loiter_dwell_detection.py
