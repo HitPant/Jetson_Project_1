@@ -16,12 +16,12 @@ loitering_dwell_detection <br>
     --- 1. loiter_dwell_detection.py<br>
     --- 2. config.json <br>
     --- 3. model<br>
-        --- MobileNetSSD_deploy.caffemodel<br>
-        --- MobileNetSSD_deploy.prototxt.txt<br>
+        ------ MobileNetSSD_deploy.caffemodel<br>
+        ------ MobileNetSSD_deploy.prototxt.txt<br>
     --- 4. tracker<br>
-        --- centroidtracker.py<br>
+        ------ centroidtracker.py<br>
     --- 5. person_count_alert:<br>
-        --- **stores images with time stamp when person exceed beyond threshold value**<br>
+        ------ **stores images with time stamp when person exceed beyond threshold value**<br>
 
 **Parameters** and **values** for generating alert are defined in **config.json**<br>
 config.json containes the following parameters:<br>
@@ -33,10 +33,10 @@ Note: To use Opencv with CUDA and use opencv dnn module install Opencv from sour
 
 Steps to run the the script:
     1. Define the following in the config.json file:
-        1. video source
-        2. person count allowed
-        3. dwell time allowed
-    2. Open the terminal in the location where loiter_dwell_detection.py is present.
+        1. video source<br>
+        2. person count allowed<br>
+        3. dwell time allowed<br>
+    2. Open the terminal in the location where loiter_dwell_detection.py is present.<br>
     
     3. run the following command:
         $ python3 loiter_dwell_detection.py
