@@ -5,13 +5,6 @@ This program performs 2 tasks:
 
 ** camera_source, dwell_time allowed and person_Count is taken from
 json file. [config.json or default.json]
-
-All three alerts are in three different function and run on seperate thread.
-1. dwell_time_alert()
-2. person_count_alert()
-
-** driver_function: [main()]:[parent thread] This is the main function that
-performs all the operations and run other sub-threads.
 '''
 
 
@@ -39,7 +32,7 @@ except:
     pass
 
 try:
-    #get the model files for caffee model
+    #get the model files for SSD model
     protopath = "./model/MobileNetSSD_deploy.prototxt.txt"
     modelpath = "./model/MobileNetSSD_deploy.caffemodel"
     detector = cv2.dnn.readNetFromCaffe(prototxt=protopath, caffeModel=modelpath)
@@ -60,7 +53,7 @@ CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
            "dog", "horse", "motorbike", "person", "pottedplant", "sheep",
            "sofa", "train", "tvmonitor"]
 
-
+#initiate the tracker object
 tracker = CentroidTracker(maxDisappeared=15)
 
 
@@ -113,7 +106,7 @@ def dwell_time_alert(dwell_time,objectId, dwell_alert):
             # cv2.imwrite(f"time_alert id:{objectId}.jpg", frame)
             dwell_alert.append(objectId)
 
-#function for geneing person_count alert and registering the IDs
+#function for generating person_count alert and registering the IDs
 def person_count_alert(objectId, perCount_alert, person_count, frame):
     if objectId not in perCount_alert:
         print(f"person count exceeded!! | Total Count: {person_count}")
@@ -124,7 +117,7 @@ def person_count_alert(objectId, perCount_alert, person_count, frame):
             os.makedirs(log_path)
         
         t = time.localtime()
-        current_time = time.strftime("%H:%M:%S", t)
+        current_time = time.strftime("%H:%M:%S", t) #time stamp for saving image
         
         #save the image to specific path and append the object_id
         cv2.imwrite(os.path.join(log_path, f"person Count exceeded{current_time}.jpg"), frame)
@@ -176,7 +169,7 @@ def main():
                 (startX, startY, endX, endY) = person_box.astype("int")
                 rects.append(person_box)
 
-        boundingboxes = np.array(rects)
+        boundingboxes = np.array(rects) #convert the bounding box cordinates to np array
         boundingboxes = boundingboxes.astype(int)
         rects = non_max_suppression_fast(boundingboxes, 0.3)
         centroid_dict = dict()
@@ -188,7 +181,8 @@ def main():
             y1 = int(y1)
             x2 = int(x2)
             y2 = int(y2)
-            cX = int((x1 + x2) / 2.0)
+	    # get the centroid from the coordinates
+            cX = int((x1 + x2) / 2.0) 
             cY = int((y1 + y2) / 2.0)
 
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
