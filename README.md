@@ -37,7 +37,7 @@ Note: To use Opencv with CUDA and use opencv dnn module install Opencv from sour
     2. person count allowed<br>
     3. dwell time allowed<br>
     <br>
-2. Open the terminal in the location where loiter_dwell_detection.py is present.<br>
+2. Open the terminal in the location where **loiter_dwell_detection.py** is present.<br>
 
 3. run the following command:
 > $ python3 loiter_dwell_detection.py
