@@ -32,6 +32,10 @@ The usecase inference was executed and tested on jetson Nano.<br>
 
 **Note: To use Opencv with CUDA and use opencv dnn module install Opencv from source.**
 
+## Before running the script run the following commands to maximize the device preformance:
+> $ sudo nvpmodel -m 0
+> $ sudo jetson_clocks
+
 ## Steps to run the the script:
 1. Define the following in the config.json file:<br>
     1. video source<br>
