@@ -29,7 +29,8 @@ The usecase inference was executed and tested on jetson Nano.<br>
     2. personCountExceed (maximum number of persons allowed in a frame at a given time)
     3. vid_source (video source[videofile, rtsp, camera])
 
-Note: To use Opencv with CUDA and use opencv dnn module install Opencv from source.
+
+**Note: To use Opencv with CUDA and use opencv dnn module install Opencv from source.**
 
 ## Steps to run the the script:
 1. Define the following in the config.json file:<br>
