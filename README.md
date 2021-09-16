@@ -10,7 +10,7 @@ This usecase is for generating alert: <br>
 
 **SSD Model** is used for detecting people.<br>
 
-# **Project Structure:**<br>
+## **Project Structure:**<br>
 
 ### loitering_dwell_detection <br>
     --- 1. loiter_dwell_detection.py<br>
@@ -24,7 +24,7 @@ This usecase is for generating alert: <br>
         ------ **stores images with time stamp when person exceed beyond threshold value**<br>
 
 ## **Parameters** and **values** for generating alert are defined in **config.json**<br>
-config.json containes the following parameters:<br>
+### config.json containes the following parameters:<br>
     1. person_duration (Dwell time allowed per person)<br>
     2. personCountExceed (maximum number of persons allowed in a frame at a given time)<br>
     3. vid_source (video source[videofile, rtsp, camera])<br>
