@@ -12,7 +12,7 @@ This usecase is for generating alert: <br>
 
 # **Project Structure:**<br>
 
-## loitering_dwell_detection <br>
+### loitering_dwell_detection <br>
     --- 1. loiter_dwell_detection.py<br>
     --- 2. config.json <br>
     --- 3. model<br>
