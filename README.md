@@ -1,4 +1,4 @@
-Description:
+# Description:
 
 The usecase is built on jetson Nano(4GB dev kit)<br>
 The usecase inference was executed and tested on jetson Nano.<br>
@@ -12,7 +12,7 @@ This usecase is for generating alert: <br>
 
 **Project Structure:**<br>
 
-loitering_dwell_detection <br>
+## loitering_dwell_detection <br>
     --- 1. loiter_dwell_detection.py<br>
     --- 2. config.json <br>
     --- 3. model<br>
@@ -31,7 +31,7 @@ config.json containes the following parameters:<br>
 
 Note: To use Opencv with CUDA and use opencv dnn module install Opencv from source.
 
-Steps to run the the script:
+## Steps to run the the script:
     1. Define the following in the config.json file:<br>
         1. video source<br>
         2. person count allowed<br>
@@ -40,4 +40,4 @@ Steps to run the the script:
     2. Open the terminal in the location where loiter_dwell_detection.py is present.<br>
     
     3. run the following command:
-        $ python3 loiter_dwell_detection.py
+    > $ python3 loiter_dwell_detection.py
