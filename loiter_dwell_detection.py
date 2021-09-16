@@ -54,7 +54,7 @@ CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
            "sofa", "train", "tvmonitor"]
 
 #initiate the tracker object
-tracker = CentroidTracker(maxDisappeared=15)
+tracker = CentroidTracker(maxDisappeared=20)
 
 
 # non_max_suppression function to avoid the over lapping boxes
@@ -159,7 +159,7 @@ def main():
         rects = []
         for i in np.arange(0, person_detections.shape[2]):
             confidence = person_detections[0, 0, i, 2]
-            if confidence > 0.65:
+            if confidence > 0.60:
                 idx = int(person_detections[0, 0, i, 1])
 
                 if CLASSES[idx] != "person":
