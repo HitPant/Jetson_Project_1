@@ -1,3 +1,7 @@
+![alt-text]https://github.com/HitPant/Jetson_Project_1/blob/main/tracker/infrence_gif.gif
+
+
+
 # Description:
 
 The usecase is built on jetson Nano(4GB dev kit)<br>
